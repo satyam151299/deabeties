@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ 'static', filename=style1.css') }}">
+  
+    <title> Diabetes  Prediction</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="heading col-sm-6">
+                <h1>Diabetes Prediction</h1>
+            </div>
+            <div class="form col-sm-6">
+                <form action="{{ url_for('predict')}}" method="post">
+                    <div class="col-sm-12 form-group">
+                        <div class="col-sm-12 name">
+                            <label for="name">Name:</label>
+                        </div>
+                        <div class=" col-sm-6">
+                            <input class = "form-control" type="text" value="" name="fname" placeholder="First Name" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <input class = "form-control" type="text" value="" name="lname" placeholder="Last Name" required>
+                        </div>   
+                    </div>
+
+
+
+                    <div class="col-sm-12 form-group">
+                        <div class="col-sm-12 name">
+                            <label>Pregnancies</label>
+                        </div>
+                        <div class="col-sm-12">
+                            <input class = "form-control" type="text" value="" name="Pregnancies" placeholder="Pregnancies (0 to 10) " required>
+                        </div>     
+                    </div>
+
+
+
+
+
+
+                    <div class="col-sm-12 form-group">
+                        <div class="col-sm-12 name">
+                            <label>Glucose</label>
+                        </div>
+                        <div class="col-sm-12">
+                                <input class = "form-control" type="text" value="" name="Glucose" placeholder="Glucose(Upto 150)" required>
+                        </div>     
+                    </div>
+                    
+                    
+                    <div class="col-sm-12 form-group">
+                        <div class="col-sm-12 name">
+                            <label>BloodPressure</label>
+                        </div>
+                        <div class="col-sm-12">
+                            <input class = "form-control" type="text" value="" name="BloodPressure" placeholder="BloodPressure(Upto 150)" required>
+                        </div>     
+                    </div>
+                    
+                    <div class="col-sm-12 form-group">
+                        <div class="col-sm-12 name">
+                            <label>SkinThickness</label>
+                        </div>
+                        <div class="col-sm-12">
+                            <input class = "form-control" type="text" value="" name="SkinThickness" placeholder="SkinThickness(Upro 125)" required>
+                        </div>     
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <div class="col-sm-12 name">
+                            <label>Insulin</label>
+                        </div>
+                        <div class="col-sm-12">
+                            <input class = "form-control" type="text" value="" name="Insulin" placeholder="Insulin(Upto 150)" required>
+                        </div>     
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <div class="col-sm-12 name">
+                            <label>BMI</label>
+                        </div>
+                        <div class="col-sm-12">
+                            <input class = "form-control" type="text" value="" name="BMI" placeholder="BMI(Upto 130)" required>
+                        </div>     
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <div class="col-sm-12 name">
+                            <label>DiabetesPedigreeFunction</label>
+                        </div>
+                        <div class="col-sm-12">
+                            <input class = "form-control" type="text" value="" name="DiabetesPedigreeFunction(Like 1.1,2.0)" placeholder="DiabetesPedigreeFunction" required>
+                        </div>     
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <div class="col-sm-12 name">
+                            <label>Age</label>
+                        </div>
+                        <div class="col-sm-12">
+                            <input class = "form-control" type="text" value="" name="Age" placeholder="Age" required>
+                        </div>     
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="button">
+                        <button type="submit" class="btn btn-primary col-sm-3">Submit</button>      
+                    </div>
+                    
+                    <div  class="col-sm-12">
+                        
+                        <p> <br>{{ prediction_text }}</p>
+                        
+                        </div>
+                           
+                </form>
+            </div>    
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
